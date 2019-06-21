@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
 import Spinner from './Spinner';
@@ -6,7 +6,7 @@ import useLocation from './useLocation';
 
 const App = () => {
   const [lat, errorMessage] = useLocation();
-  
+
   const renderContent = () => {
     if (errorMessage && lat) {
       return <div>Error: {errorMessage}</div>;
